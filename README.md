@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🎬 VEO Dialogue Generator - Complete System
 
 AI-powered Resume to Video JSON Generator for Google VEO 3.1 & Flow
