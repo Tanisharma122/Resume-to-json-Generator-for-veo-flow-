@@ -320,13 +320,18 @@ def internal_error(error):
     }), 500
 
 
+
 # ============ MAIN ============
 
 if __name__ == '__main__':
     print("\n" + "="*60)
     print("🎬 VEO DIALOGUE GENERATOR - BACKEND SERVER")
     print("="*60)
-    print(f"📍 Server starting on http://localhost:5001")
+    
+    # Get port from environment (Render sets this)
+    port = int(os.getenv('PORT', 5001))
+    
+    print(f"📍 Server starting on port {port}")
     print(f"🔑 Groq API Key: {'✅ Configured' if GROQ_API_KEY else '❌ Not configured'}")
     print(f"📁 Upload folder: {UPLOAD_FOLDER}")
     print(f"📁 Output folder: {OUTPUT_FOLDER}")
@@ -347,8 +352,11 @@ if __name__ == '__main__':
         print("="*60 + "\n")
     
     # Run Flask app
+    # When run with gunicorn, this code won't execute
+    # When run locally with python app.py, it will use these settings
     app.run(
         host='0.0.0.0',
-        port=5001,
-        debug=True
+        port=port,
+        debug=os.getenv('FLASK_ENV') != 'production'
     )
+
