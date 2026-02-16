@@ -51,7 +51,7 @@ GROQ_API_KEY=your_groq_api_key_here
 python app.py
 ```
 
-The server will start on `http://localhost:5001`
+The server will start on `https://resume-to-json-generator-for-veo-flow.onrender.com`
 
 ### **Step 4: Open the Frontend**
 
