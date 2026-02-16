@@ -326,7 +326,7 @@ if __name__ == '__main__':
     print("\n" + "="*60)
     print("🎬 VEO DIALOGUE GENERATOR - BACKEND SERVER")
     print("="*60)
-    print(f"📍 Server starting on http://localhost:5001")
+    print(f"📍 Server starting on https://resume-to-json-generator-for-veo-flow.onrender.com")
     print(f"🔑 Groq API Key: {'✅ Configured' if GROQ_API_KEY else '❌ Not configured'}")
     print(f"📁 Upload folder: {UPLOAD_FOLDER}")
     print(f"📁 Output folder: {OUTPUT_FOLDER}")
